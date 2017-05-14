@@ -21,7 +21,9 @@ within the Login.csproj remove the following lines:
    <SignManifests>false</SignManifests>
 </PropertyGroup>
 ```
-Once those lines have been removed the only thing that should be stopping you from compiling are two missing libraries: IWishRuntimeLibrary and WindowsInput
+Once those lines have been removed the only thing that should be stopping you from compiling are two missing libraries: IWishRuntimeLibrary and WindowsInput.
+
+Note: Solution for certificate found at http://stackoverflow.com/questions/11957295/unable-to-find-manifest-signing-certificate-in-the-certificate-store-even-wh
 
 In order to add a reference for IWishRuntimeLibrary simply go to References in you solution explorer, right click and select 'Add Reference...', then go to the COM tab and type 'Windows Script Host Object Model'.
 
