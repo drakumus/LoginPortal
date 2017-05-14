@@ -7,7 +7,7 @@ navigate to Login>Login>Login.csproj
 you need to edit this file so get out your favorite text editor and open it up.
 within the Login.csproj remove the following lines:
 
-'''xml
+```xml
 <PropertyGroup>
    <ManifestCertificateThumbprint>...........</ManifestCertificateThumbprint>
 </PropertyGroup>
@@ -20,5 +20,13 @@ within the Login.csproj remove the following lines:
 <PropertyGroup>
    <SignManifests>false</SignManifests>
 </PropertyGroup>
-'''
+```
 Once those lines have been removed the only thing that should be stopping you from compiling are two missing libraries: IWishRuntimeLibrary and WindowsInput
+
+In order to add a reference for IWishRuntimeLibrary simply go to References in you solution explorer, right click and select 'Add Reference...', then go to the COM tab and type 'Windows Script Host Object Model'.
+
+In order to add a reference for WindowsInput you'll need to grab the projects compiled .dll from 
+https://inputsimulator.codeplex.com/
+Once it's downloaded unpack to a permanent place and once again navigate to 'Add Reference'. This time go to Browse and select 'Browse...' button at the bottom. navigate to the unpacked folder for WindowsInput and select the InputSimulator.dll in the Release folder.
+
+Once all that's done you should be good to go for project compile. Enjoy
