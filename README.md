@@ -7,7 +7,7 @@ navigate to Login>Login>Login.csproj
 you need to edit this file so get out your favorite text editor and open it up.
 within the Login.csproj remove the following lines:
 
-'''XML
+'''xml
 <PropertyGroup>
    <ManifestCertificateThumbprint>...........</ManifestCertificateThumbprint>
 </PropertyGroup>
